@@ -9,7 +9,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("salliKaikki",
+    options.AddPolicy("all",
     builder => builder.AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader());
@@ -30,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors("salliKaikki");
+app.UseCors("all");
 
 app.Run();
