@@ -15,10 +15,8 @@ namespace TimesheetBackend.Controllers
 
         public List<Employee> GetAllActive()
         {
-            var employees = db.Employees.Where(e => e.Active == true);
-            
+            var employees = db.Employees.Where(e => e.Active == true);            
             return employees.ToList(); 
         }
-
     }
 }
